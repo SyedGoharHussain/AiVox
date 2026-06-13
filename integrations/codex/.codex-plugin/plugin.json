@@ -1,0 +1,22 @@
+{
+  "name": "aivox",
+  "version": "0.1.1",
+  "description": "Connect Codex to a scoped AiVox instance.",
+  "author": {
+    "name": "AiVox"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AiVox",
+    "shortDescription": "Use scoped AiVox tools from Codex.",
+    "longDescription": "Connects Codex terminal sessions to AiVox through user-controlled scoped API tokens. Codex must use /api/codex/* endpoints so AiVox Settings can enforce tool access.",
+    "developerName": "AiVox",
+    "category": "Productivity",
+    "capabilities": [
+      "todos",
+      "email",
+      "scoped-api"
+    ],
+    "defaultPrompt": "Use AiVox only through configured scoped access. Check capabilities before reading or writing data."
+  }
+}
