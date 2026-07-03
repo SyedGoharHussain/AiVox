@@ -56,7 +56,7 @@ def _auth_disabled() -> bool:
     """True when the operator has explicitly turned off auth via .env.
     Mirrors the AUTH_ENABLED parse in app.py / core/middleware.py so the
     three call sites agree on what "off" means."""
-    return os.getenv("AUTH_ENABLED", "true").lower() == "false"
+    return os.getenv("AUTH_ENABLED", "false").lower() != "true"
 
 
 def require_user(request: Request) -> str:

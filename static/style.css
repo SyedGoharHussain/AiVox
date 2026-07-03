@@ -18,7 +18,9 @@
 :root {
   /* Core palette */
   --bg: #121212;
-  --fg: #D7CCC8;
+  --bg-secondary: #3E2723;
+  --fg: #FFFFFF;
+  --fg-secondary: #D7CCC8;
   --panel: #4E342E;
   --border: #5D4037;
   --red: #8D6E63;
@@ -559,6 +561,11 @@ body.bg-pattern-sparkles {
       align-items: center;
       flex-shrink: 0;
       min-height: 24px;
+    }
+    .sidebar-brand img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
     }
     .sidebar-brand-title {
       font-size: 1rem;

@@ -43,7 +43,7 @@ services:
       - CHROMADB_HOST=chromadb
       - CHROMADB_PORT=8000
       - DATABASE_URL=${DATABASE_URL:-sqlite:///./data/app.db}
-      - AUTH_ENABLED=${AUTH_ENABLED:-true}
+      - AUTH_ENABLED=${AUTH_ENABLED:-false}
       - LOCALHOST_BYPASS=${LOCALHOST_BYPASS:-false}
       - AIVOX_ADMIN_USER=${AIVOX_ADMIN_USER:-admin}
       - AIVOX_ADMIN_PASSWORD=${AIVOX_ADMIN_PASSWORD:-}

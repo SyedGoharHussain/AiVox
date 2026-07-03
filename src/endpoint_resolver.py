@@ -213,7 +213,7 @@ def build_headers(api_key: Optional[str], base: str) -> Dict[str, str]:
     if api_key:
         headers["Authorization"] = f"Bearer {api_key}"
     if provider == "openrouter":
-        headers.setdefault("HTTP-Referer", "https://github.com/pewdiepie-archdaemon/aivox")
+        headers.setdefault("HTTP-Referer", "https://github.com/syedgoharhussain/AiVox")
         headers.setdefault("X-OpenRouter-Title", "AiVox")
     return headers
 

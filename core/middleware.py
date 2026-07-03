@@ -45,7 +45,7 @@ def require_admin(request: Request):
         pass
 
     auth_mgr = getattr(request.app.state, "auth_manager", None)
-    if os.getenv("AUTH_ENABLED", "true").lower() == "false":
+    if os.getenv("AUTH_ENABLED", "false").lower() != "true":
         return
     if not auth_mgr or not auth_mgr.is_configured:
         raise HTTPException(403, "Admin only")

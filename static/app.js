@@ -1097,8 +1097,13 @@ function initializeEventListeners() {
   const toolThemeBtn = el('tool-theme-btn');
   if (toolThemeBtn) {
     toolThemeBtn.addEventListener('click', () => {
-      const tm = document.getElementById('theme-modal');
-      if (tm) tm.classList.remove('hidden');
+      const isLight = document.documentElement.classList.contains('light');
+      import('./js/theme.js').then(themeModule => {
+        themeModule.setTheme(isLight ? 'dark' : 'light');
+      }).catch(e => {
+        document.documentElement.classList.toggle('light');
+        if (!isLight) document.documentElement.style.background = '#121212';
+      });
     });
   }
 
